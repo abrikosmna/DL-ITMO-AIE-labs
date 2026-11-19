@@ -1,0 +1,10 @@
+{
+  "ultralytics": "8.4.0",
+  "weights": "yolo26n.pt",
+  "size_mb": 5.287602424621582,
+  "params": 2572280,
+  "n_classes_coco": 80,
+  "latency_ms": 26.502636899999743,
+  "latency_std_ms": 8.513965072148494,
+  "latency_protocol": "batch=1, numpy RGB input, preprocess+forward+postprocess, 5 warmups + 20 repeats"
+}

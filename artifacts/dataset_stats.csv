@@ -1,0 +1,4 @@
+split,images,objects_per_image,RBC,WBC,Platelets
+train,254,13.511811023622048,2917,258,257
+val,55,13.0,604,57,54
+test,55,13.472727272727273,634,57,50

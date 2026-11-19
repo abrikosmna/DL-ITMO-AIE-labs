@@ -1,0 +1,14 @@
+{
+  "main": {
+    "val/box_loss": [
+      1
+    ],
+    "val/cls_loss": [
+      1
+    ],
+    "val/dfl_loss": [
+      1
+    ]
+  },
+  "ablation": {}
+}
