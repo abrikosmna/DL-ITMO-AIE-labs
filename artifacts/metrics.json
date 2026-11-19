@@ -1,0 +1,161 @@
+{
+  "track": "cv",
+  "model": "yolo26n.pt",
+  "revision": "ultralytics==8.4.0",
+  "dataset": "BCCD; https://github.com/Shenggan/BCCD_Dataset; MIT; commit=d272fb14cdff6e473fafeeeba32aba5f560e9e43",
+  "classes": [
+    "RBC",
+    "WBC",
+    "Platelets"
+  ],
+  "n_train": 254,
+  "n_val": 55,
+  "n_test": 55,
+  "params_total": 2572280,
+  "baseline": {
+    "split": "test",
+    "coco_map50": 0.0,
+    "heuristic_map50": 0.004822769294294091,
+    "heuristic_ap50_per_class": {
+      "RBC": 0.014468307882882274,
+      "WBC": 0.0,
+      "Platelets": 0.0
+    }
+  },
+  "final": {
+    "map50": 0.3585668717810004,
+    "map50_95": 0.13078401008391335,
+    "precision": 0.613937416581393,
+    "recall": 0.4291634802851167,
+    "per_class": {
+      "RBC": {
+        "map50": 0.07860406792059811,
+        "map50_95": 0.031261369053323745,
+        "precision": 1.0,
+        "recall": 0.0
+      },
+      "WBC": {
+        "map50": 0.5753319473939115,
+        "map50_95": 0.19298852604699365,
+        "precision": 0.3988556815965566,
+        "recall": 0.8421052631578947
+      },
+      "Platelets": {
+        "map50": 0.42176460002849153,
+        "map50_95": 0.16810213515142264,
+        "precision": 0.4429565681476225,
+        "recall": 0.4453851776974553
+      }
+    },
+    "split": "test",
+    "manual_map50": 0.33878634130390456
+  },
+  "ablation": {
+    "changed": "freeze",
+    "values": [
+      0,
+      11
+    ],
+    "split": "val",
+    "baseline": {
+      "map50": 0.3465323923816679,
+      "map50_95": 0.11964127935746438,
+      "precision": 0.6215579131587731,
+      "recall": 0.38329375432093604,
+      "per_class": {
+        "RBC": {
+          "map50": 0.07348267101011582,
+          "map50_95": 0.028864355361339588,
+          "precision": 1.0,
+          "recall": 0.0
+        },
+        "WBC": {
+          "map50": 0.6434239809439282,
+          "map50_95": 0.21753566949456435,
+          "precision": 0.4754892240339905,
+          "recall": 0.7368421052631579
+        },
+        "Platelets": {
+          "map50": 0.32269052519095975,
+          "map50_95": 0.11252381321648923,
+          "precision": 0.3891845154423288,
+          "recall": 0.4130391576996502
+        }
+      },
+      "train_time_sec": 459.7423086490003
+    },
+    "frozen": {
+      "map50": 0.6060715799335873,
+      "map50_95": 0.27649997732667403,
+      "precision": 0.5100279312723323,
+      "recall": 0.6045316258514818,
+      "per_class": {
+        "RBC": {
+          "map50": 0.6793291230894946,
+          "map50_95": 0.3646050207623293,
+          "precision": 0.4420806277588175,
+          "recall": 0.8145695364238411
+        },
+        "WBC": {
+          "map50": 0.5556390037824755,
+          "map50_95": 0.22742524052100702,
+          "precision": 0.68156703127093,
+          "recall": 0.3508771929824561
+        },
+        "Platelets": {
+          "map50": 0.5832466129287919,
+          "map50_95": 0.23746967069668568,
+          "precision": 0.4064361347872491,
+          "recall": 0.6481481481481481
+        }
+      },
+      "train_time_sec": 341.3898543720002
+    },
+    "same_seed": 0,
+    "same_initial_weights": "yolo26n.pt"
+  },
+  "errors": {
+    "tp": 14,
+    "class": 0,
+    "localization": 7,
+    "background": 3,
+    "missed": 694
+  },
+  "device": "Tesla T4",
+  "train_time_sec": 459.7423086490003,
+  "fast_mode": false,
+  "train_args": {
+    "epochs": 60,
+    "imgsz": 640,
+    "batch": 16,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "lrf": 0.01,
+    "weight_decay": 0.0005,
+    "cos_lr": true,
+    "warmup_epochs": 3,
+    "patience": 60,
+    "seed": 0,
+    "deterministic": true,
+    "amp": false,
+    "val": true,
+    "plots": true,
+    "save": true,
+    "hsv_h": 0.015,
+    "hsv_s": 0.3,
+    "hsv_v": 0.3,
+    "degrees": 15,
+    "translate": 0.1,
+    "scale": 0.3,
+    "fliplr": 0.5,
+    "flipud": 0.5,
+    "mosaic": 0.5,
+    "close_mosaic": 10,
+    "mixup": 0.0
+  },
+  "run_times": {
+    "heuristic": 0.07386226400012674,
+    "train": 459.7423086490003,
+    "ablation": 341.3898543720002
+  }
+}
